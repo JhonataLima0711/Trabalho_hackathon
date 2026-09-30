@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Criar conta | Revalora</title><link rel="stylesheet" href="css/styles.css"></head>
+<body class="auth-v2">
+  <main class="auth-box">
+    <a class="logo" href="index.html"><span>↻</span> revalora</a>
+    <div class="auth-title"><span class="tag">NOVO NEGÓCIO</span><h1>Começar é simples.</h1><p>Crie sua conta com apenas três informações.</p></div>
+    <div id="registerAlert" class="alert hidden"></div>
+    <form id="registerForm" class="form-v2">
+      <label>Nome da empresa<input id="companyName" type="text" placeholder="Ex.: Oficina Norte" required></label>
+      <label>E-mail<input id="registerEmail" type="email" placeholder="empresa@email.com" required></label>
+      <label>Senha<input id="registerPassword" type="password" placeholder="Mínimo de 6 caracteres" minlength="6" required></label>
+      <label class="check"><input id="registerTerms" type="checkbox" required> Concordo com os termos da demonstração.</label>
+      <button class="btn solid wide" type="submit">Criar conta →</button>
+    </form>
+    <div class="auth-bottom"><span>Já possui cadastro?</span><a href="login.html">Entrar</a></div>
+  </main>
+  <script src="js/app.js"></script><script src="js/auth.js"></script>
+</body>
+</html>

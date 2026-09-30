@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visão geral | Revalora</title><link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-v2">
+  <header class="app-header">
+    <a class="logo" href="dashboard.html"><span>↻</span> revalora</a>
+    <nav class="app-nav">
+      <a class="on" href="dashboard.html">Visão geral</a>
+      <a class="" href="residuos.html">Resíduos</a>
+      <a class="" href="coletas.html">Coletas</a>
+      <a class="" href="parceiros.html">Parceiros</a>
+      <a class="" href="carteira.html">Carteira</a>
+    </nav>
+    <div class="header-user">
+      <button class="circle-btn" id="settingsBtn" title="Configurações">⚙</button>
+      <span class="user-initials" id="topAvatar">RV</span>
+    </div>
+  </header>
+
+  <aside class="settings-panel" id="settingsPanel">
+    <div class="settings-head"><div><span class="tag">PREFERÊNCIAS</span><h3>Configurações</h3></div><button class="close-settings" id="closeSettings">×</button></div>
+    <div class="setting-card"><div><strong>Tema escuro</strong><small>Alternar aparência do sistema</small></div><label class="switch"><input id="darkToggle" type="checkbox"><span></span></label></div>
+    <div class="setting-card"><div><strong>Notificações</strong><small>Alertas de coletas e créditos</small></div><label class="switch"><input id="notifyToggle" type="checkbox" checked><span></span></label></div>
+    <div class="setting-card"><div><strong>Modo compacto</strong><small>Reduz espaços no painel</small></div><label class="switch"><input id="compactToggle" type="checkbox"><span></span></label></div>
+    <div class="setting-profile"><span class="user-initials large" id="settingsAvatar">RV</span><div><strong id="settingsCompany">Minha Empresa</strong><small id="settingsEmail">empresa@email.com</small></div></div>
+    <button class="btn outline wide" id="settingsSave">Salvar preferências</button>
+    <button class="logout-button" id="logoutLink">Sair da conta</button>
+  </aside>
+  <div class="settings-overlay" id="settingsOverlay"></div>
+
+  <main class="app-content">
+
+<section class="dash-top">
+  <div><span class="tag">PAINEL DA EMPRESA</span><h1>Transforme resíduo em <em>retorno.</em></h1><p id="companyIntro">Aqui está o resumo da sua operação.</p></div>
+  <a class="btn solid" href="residuos.html?action=add">+ Novo resíduo</a>
+</section>
+
+<section class="balance-card">
+  <div class="balance-main"><span>CRÉDITOS DISPONÍVEIS</span><strong>R$ 842<small>,70</small></strong><b>↗ +18,6% no mês</b></div>
+  <div class="balance-side"><small>Em processamento</small><strong>R$ 84,30</strong><a href="carteira.html">Abrir carteira →</a></div>
+  <div class="balance-wave"></div>
+</section>
+
+<section class="stat-strip">
+  <div><span>♻</span><small>Materiais recuperados</small><strong>1.248 kg</strong><b>+14,2%</b></div>
+  <div><span>🚚</span><small>Coletas concluídas</small><strong>38</strong><b>4 próximas</b></div>
+  <div><span>◎</span><small>Destinação confirmada</small><strong>91%</strong><b>+4,1 p.p.</b></div>
+  <div><span>◈</span><small>Valor movimentado</small><strong>R$ 4.286</strong><b>+18,6%</b></div>
+</section>
+
+<section class="dash-grid">
+  <article class="panel-v2 latest-panel">
+    <div class="panel-title"><div><span class="tag">RECENTES</span><h2>Últimas operações</h2></div><a href="coletas.html">Ver coletas →</a></div>
+    <div class="latest-list">
+      <div><i class="material-symbol oil">🛢️</i><div><strong>Óleo lubrificante</strong><small>EcoÓleo • coleta confirmada</small></div><b class="green-text">+ R$ 84,00</b></div>
+      <div><i class="material-symbol paper">📦</i><div><strong>Papelão</strong><small>EcoCiclo • 126 kg</small></div><b class="green-text">+ R$ 32,50</b></div>
+      <div><i class="material-symbol metal">🔩</i><div><strong>Sucata metálica</strong><small>MetalVerde • 32 kg</small></div><b class="green-text">+ R$ 96,20</b></div>
+      <div><i class="material-symbol plastic">🧴</i><div><strong>Plástico rígido</strong><small>EcoCiclo • destinação confirmada</small></div><b>R$ 72,00</b></div>
+    </div>
+  </article>
+  <article class="panel-v2 impact-panel">
+    <div class="panel-title"><div><span class="tag">IMPACTO</span><h2>Este mês</h2></div></div>
+    <div class="impact-big"><strong>1,24</strong><span>toneladas recuperadas</span></div>
+    <div class="impact-meter"><div><i style="width:91%"></i></div><strong>91%</strong></div>
+    <p>dos materiais cadastrados tiveram destinação confirmada.</p>
+    <div class="impact-chips"><span>♻ economia circular</span><span>✓ meta batida</span></div>
+  </article>
+</section>
+
+<section class="quick-actions">
+  <a href="residuos.html"><span>♻</span><strong>Cadastrar resíduo</strong><small>Adicionar um novo material</small></a>
+  <a href="coletas.html"><span>🚚</span><strong>Solicitar coleta</strong><small>Encontrar parceiro</small></a>
+  <a href="carteira.html"><span>◈</span><strong>Usar créditos</strong><small>Ver benefícios</small></a>
+</section>
+
+  </main>
+  <script src="js/app.js"></script><script src="js/auth.js"></script><script src="js/dashboard.js"></script>
+</body>
+</html>

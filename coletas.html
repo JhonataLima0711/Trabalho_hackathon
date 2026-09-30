@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coletas | Revalora</title><link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-v2">
+  <header class="app-header">
+    <a class="logo" href="dashboard.html"><span>↻</span> revalora</a>
+    <nav class="app-nav">
+      <a class="" href="dashboard.html">Visão geral</a>
+      <a class="" href="residuos.html">Resíduos</a>
+      <a class="on" href="coletas.html">Coletas</a>
+      <a class="" href="parceiros.html">Parceiros</a>
+      <a class="" href="carteira.html">Carteira</a>
+    </nav>
+    <div class="header-user">
+      <button class="circle-btn" id="settingsBtn" title="Configurações">⚙</button>
+      <span class="user-initials" id="topAvatar">RV</span>
+    </div>
+  </header>
+
+  <aside class="settings-panel" id="settingsPanel">
+    <div class="settings-head"><div><span class="tag">PREFERÊNCIAS</span><h3>Configurações</h3></div><button class="close-settings" id="closeSettings">×</button></div>
+    <div class="setting-card"><div><strong>Tema escuro</strong><small>Alternar aparência do sistema</small></div><label class="switch"><input id="darkToggle" type="checkbox"><span></span></label></div>
+    <div class="setting-card"><div><strong>Notificações</strong><small>Alertas de coletas e créditos</small></div><label class="switch"><input id="notifyToggle" type="checkbox" checked><span></span></label></div>
+    <div class="setting-card"><div><strong>Modo compacto</strong><small>Reduz espaços no painel</small></div><label class="switch"><input id="compactToggle" type="checkbox"><span></span></label></div>
+    <div class="setting-profile"><span class="user-initials large" id="settingsAvatar">RV</span><div><strong id="settingsCompany">Minha Empresa</strong><small id="settingsEmail">empresa@email.com</small></div></div>
+    <button class="btn outline wide" id="settingsSave">Salvar preferências</button>
+    <button class="logout-button" id="logoutLink">Sair da conta</button>
+  </aside>
+  <div class="settings-overlay" id="settingsOverlay"></div>
+
+  <main class="app-content">
+
+<section class="page-heading-v2"><div><span class="tag">LOGÍSTICA</span><h1>Coletas</h1><p>Veja o que está agendado e o que já foi concluído.</p></div><button class="btn solid" id="newCollection">+ Solicitar coleta</button></section>
+<section class="collection-highlight"><div><span class="tag light">PRÓXIMA COLETA</span><h2>EcoÓleo</h2><p>Óleo lubrificante · 80 L</p><div class="collection-time">30/09 <b>09:00–11:00</b></div></div><div class="pickup-route"><div class="route-path"></div><span>🏢</span><b>4,8 km</b><span>♻</span></div></section>
+<section class="panel-v2"><div class="panel-title"><div><span class="tag">AGENDA</span><h2>Coletas</h2></div></div>
+<div class="collection-list">
+  <div class="collection-row"><span class="date-box"><b>30</b><small>SET</small></span><div><strong>EcoÓleo</strong><small>80 L de óleo lubrificante</small></div><span class="badge amber">Amanhã</span><span>R$ 284,00</span></div>
+  <div class="collection-row"><span class="date-box"><b>02</b><small>OUT</small></span><div><strong>EcoCiclo</strong><small>126 kg de papelão</small></div><span class="badge gray">Agendada</span><span>R$ 157,50</span></div>
+  <div class="collection-row"><span class="date-box done"><b>24</b><small>SET</small></span><div><strong>MetalVerde</strong><small>32 kg de sucata metálica</small></div><span class="badge green">Confirmada</span><span>R$ 96,20</span></div>
+</div></section>
+<div class="modal hidden" id="collectionModal"><div class="modal-v2"><button class="modal-x" data-close-modal>×</button><span class="tag">NOVA COLETA</span><h2>Solicitar coleta</h2><form id="collectionForm" class="form-v2"><label>Material<select><option>Óleo lubrificante — 80 L</option><option>Papelão — 126 kg</option><option>Sucata metálica — 140 kg</option></select></label><label>Data<input type="date" required></label><label>Horário<select><option>08:00–10:00</option><option>10:00–12:00</option><option>14:00–16:00</option></select></label><button class="btn solid wide">Confirmar solicitação</button></form></div></div>
+
+  </main>
+  <script src="js/app.js"></script><script src="js/auth.js"></script><script src="js/coletas.js"></script>
+</body>
+</html>

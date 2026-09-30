@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carteira | Revalora</title><link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-v2">
+  <header class="app-header">
+    <a class="logo" href="dashboard.html"><span>↻</span> revalora</a>
+    <nav class="app-nav">
+      <a class="" href="dashboard.html">Visão geral</a>
+      <a class="" href="residuos.html">Resíduos</a>
+      <a class="" href="coletas.html">Coletas</a>
+      <a class="" href="parceiros.html">Parceiros</a>
+      <a class="on" href="carteira.html">Carteira</a>
+    </nav>
+    <div class="header-user">
+      <button class="circle-btn" id="settingsBtn" title="Configurações">⚙</button>
+      <span class="user-initials" id="topAvatar">RV</span>
+    </div>
+  </header>
+
+  <aside class="settings-panel" id="settingsPanel">
+    <div class="settings-head"><div><span class="tag">PREFERÊNCIAS</span><h3>Configurações</h3></div><button class="close-settings" id="closeSettings">×</button></div>
+    <div class="setting-card"><div><strong>Tema escuro</strong><small>Alternar aparência do sistema</small></div><label class="switch"><input id="darkToggle" type="checkbox"><span></span></label></div>
+    <div class="setting-card"><div><strong>Notificações</strong><small>Alertas de coletas e créditos</small></div><label class="switch"><input id="notifyToggle" type="checkbox" checked><span></span></label></div>
+    <div class="setting-card"><div><strong>Modo compacto</strong><small>Reduz espaços no painel</small></div><label class="switch"><input id="compactToggle" type="checkbox"><span></span></label></div>
+    <div class="setting-profile"><span class="user-initials large" id="settingsAvatar">RV</span><div><strong id="settingsCompany">Minha Empresa</strong><small id="settingsEmail">empresa@email.com</small></div></div>
+    <button class="btn outline wide" id="settingsSave">Salvar preferências</button>
+    <button class="logout-button" id="logoutLink">Sair da conta</button>
+  </aside>
+  <div class="settings-overlay" id="settingsOverlay"></div>
+
+  <main class="app-content">
+
+<section class="wallet-top"><div><span class="tag light">CARTEIRA</span><h1>R$ 842<small>,70</small></h1><p>créditos disponíveis</p></div><button class="btn light-btn" id="redeemBtn">Usar créditos →</button></section>
+<section class="wallet-cards"><div><small>Ganhos este mês</small><strong>R$ 412,70</strong><b>↗ 18,6%</b></div><div><small>Pendentes</small><strong>R$ 84,30</strong><span>2 coletas</span></div><div><small>Resgatado</small><strong>R$ 120,00</strong><span>1 benefício</span></div></section>
+<section class="panel-v2"><div class="panel-title"><div><span class="tag">EXTRATO</span><h2>Movimentações</h2></div></div><div class="statement">
+<div><i class="tx plus">+</i><span><strong>Óleo lubrificante</strong><small>EcoÓleo · 29/09</small></span><b class="green-text">+ R$ 84,00</b></div>
+<div><i class="tx plus">+</i><span><strong>Papelão</strong><small>EcoCiclo · 28/09</small></span><b class="green-text">+ R$ 32,50</b></div>
+<div><i class="tx minus">−</i><span><strong>Benefício AutoMais</strong><small>26/09</small></span><b>− R$ 120,00</b></div>
+<div><i class="tx plus">+</i><span><strong>Sucata metálica</strong><small>MetalVerde · 24/09</small></span><b class="green-text">+ R$ 96,20</b></div>
+</div></section>
+
+  </main>
+  <script src="js/app.js"></script><script src="js/auth.js"></script><script src="js/carteira.js"></script>
+</body>
+</html>
