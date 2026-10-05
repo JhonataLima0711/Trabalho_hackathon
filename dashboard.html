@@ -35,36 +35,32 @@
 
 <section class="dash-top">
   <div><span class="tag">PAINEL DA EMPRESA</span><h1>Transforme resíduo em <em>retorno.</em></h1><p id="companyIntro">Aqui está o resumo da sua operação.</p></div>
-  <a class="btn solid" href="residuos.html?action=add">+ Novo resíduo</a>
+  <div class="dash-actions"><a class="btn solid" href="residuos.html?action=add">+ Novo resíduo</a><button class="btn outline" id="resetDemoBtn" type="button">↻ Resetar demo</button></div>
 </section>
 
 <section class="balance-card">
-  <div class="balance-main"><span>CRÉDITOS DISPONÍVEIS</span><strong>R$ 842<small>,70</small></strong><b>↗ +18,6% no mês</b></div>
-  <div class="balance-side"><small>Em processamento</small><strong>R$ 84,30</strong><a href="carteira.html">Abrir carteira →</a></div>
+  <div class="balance-main"><span>CRÉDITOS DISPONÍVEIS</span><strong id="dashBalance">R$ 842,70</strong><b>↗ +18,6% no mês</b></div>
+  <div class="balance-side"><small>Em processamento</small><strong id="dashPending">R$ 84,30</strong><a href="carteira.html">Abrir carteira →</a></div>
   <div class="balance-wave"></div>
 </section>
 
 <section class="stat-strip">
-  <div><span>♻</span><small>Materiais recuperados</small><strong>1.248 kg</strong><b>+14,2%</b></div>
-  <div><span>🚚</span><small>Coletas concluídas</small><strong>38</strong><b>4 próximas</b></div>
-  <div><span>◎</span><small>Destinação confirmada</small><strong>91%</strong><b>+4,1 p.p.</b></div>
-  <div><span>◈</span><small>Valor movimentado</small><strong>R$ 4.286</strong><b>+18,6%</b></div>
+  <div><span>♻</span><small>Materiais recuperados</small><strong id="dashRecovered">1.248 kg</strong><b>+14,2%</b></div>
+  <div><span>🚚</span><small>Coletas concluídas</small><strong id="dashCollections">38</strong><b>4 próximas</b></div>
+  <div><span>◎</span><small>Destinação confirmada</small><strong id="dashConfirmed">91%</strong><b>+4,1 p.p.</b></div>
+  <div><span>◈</span><small>Valor movimentado</small><strong id="dashMoved">R$ 4.286,00</strong><b>+18,6%</b></div>
 </section>
 
 <section class="dash-grid">
   <article class="panel-v2 latest-panel">
     <div class="panel-title"><div><span class="tag">RECENTES</span><h2>Últimas operações</h2></div><a href="coletas.html">Ver coletas →</a></div>
-    <div class="latest-list">
-      <div><i class="material-symbol oil">🛢️</i><div><strong>Óleo lubrificante</strong><small>EcoÓleo • coleta confirmada</small></div><b class="green-text">+ R$ 84,00</b></div>
-      <div><i class="material-symbol paper">📦</i><div><strong>Papelão</strong><small>EcoCiclo • 126 kg</small></div><b class="green-text">+ R$ 32,50</b></div>
-      <div><i class="material-symbol metal">🔩</i><div><strong>Sucata metálica</strong><small>MetalVerde • 32 kg</small></div><b class="green-text">+ R$ 96,20</b></div>
-      <div><i class="material-symbol plastic">🧴</i><div><strong>Plástico rígido</strong><small>EcoCiclo • destinação confirmada</small></div><b>R$ 72,00</b></div>
-    </div>
+    <div class="latest-list" id="latestList"></div>
+
   </article>
   <article class="panel-v2 impact-panel">
     <div class="panel-title"><div><span class="tag">IMPACTO</span><h2>Este mês</h2></div></div>
     <div class="impact-big"><strong>1,24</strong><span>toneladas recuperadas</span></div>
-    <div class="impact-meter"><div><i style="width:91%"></i></div><strong>91%</strong></div>
+    <div class="impact-meter"><div><i style="width:91%"></i></div><strong id="dashConfirmed">91%</strong></div>
     <p>dos materiais cadastrados tiveram destinação confirmada.</p>
     <div class="impact-chips"><span>♻ economia circular</span><span>✓ meta batida</span></div>
   </article>
@@ -77,6 +73,6 @@
 </section>
 
   </main>
-  <script src="app.js"></script><script src="auth.js"></script><script src="dashboard.js"></script>
+  <script src="app.js"></script><script src="store.js"></script><script src="auth.js"></script><script src="dashboard.js"></script>
 </body>
 </html>

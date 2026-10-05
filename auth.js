@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     const alert=document.getElementById('registerAlert');
     if(password.length<6){alert.textContent='A senha precisa ter pelo menos 6 caracteres.';alert.className='alert error';return;}
     localStorage.setItem('revalora_user',JSON.stringify({company,email,owner:'Administrador'}));
+    if(window.RevaloraStore) RevaloraStore.reset();
     alert.textContent='Cadastro concluído! Abrindo painel...';alert.className='alert success';
     setTimeout(()=>location.href='dashboard.html',350);
   });

@@ -34,16 +34,12 @@
   <main class="app-content">
 
 <section class="page-heading-v2"><div><span class="tag">LOGÍSTICA</span><h1>Coletas</h1><p>Veja o que está agendado e o que já foi concluído.</p></div><button class="btn solid" id="newCollection">+ Solicitar coleta</button></section>
-<section class="collection-highlight"><div><span class="tag light">PRÓXIMA COLETA</span><h2>EcoÓleo</h2><p>Óleo lubrificante · 80 L</p><div class="collection-time">30/09 <b>09:00–11:00</b></div></div><div class="pickup-route"><div class="route-path"></div><span>🏢</span><b>4,8 km</b><span>♻</span></div></section>
+<section class="collection-highlight"><div><span class="tag light">PRÓXIMA COLETA</span><h2 id="nextPartner">EcoÓleo</h2><p id="nextMaterial">Óleo lubrificante · 80 L</p><div class="collection-time"><span id="nextDate">30/09</span> <b id="nextTime">09:00–11:00</b></div></div><div class="pickup-route"><div class="route-path"></div><span>🏢</span><b>4,8 km</b><span>♻</span></div></section>
 <section class="panel-v2"><div class="panel-title"><div><span class="tag">AGENDA</span><h2>Coletas</h2></div></div>
-<div class="collection-list">
-  <div class="collection-row"><span class="date-box"><b>30</b><small>SET</small></span><div><strong>EcoÓleo</strong><small>80 L de óleo lubrificante</small></div><span class="badge amber">Amanhã</span><span>R$ 284,00</span></div>
-  <div class="collection-row"><span class="date-box"><b>02</b><small>OUT</small></span><div><strong>EcoCiclo</strong><small>126 kg de papelão</small></div><span class="badge gray">Agendada</span><span>R$ 157,50</span></div>
-  <div class="collection-row"><span class="date-box done"><b>24</b><small>SET</small></span><div><strong>MetalVerde</strong><small>32 kg de sucata metálica</small></div><span class="badge green">Confirmada</span><span>R$ 96,20</span></div>
-</div></section>
-<div class="modal hidden" id="collectionModal"><div class="modal-v2"><button class="modal-x" data-close-modal>×</button><span class="tag">NOVA COLETA</span><h2>Solicitar coleta</h2><form id="collectionForm" class="form-v2"><label>Material<select><option>Óleo lubrificante — 80 L</option><option>Papelão — 126 kg</option><option>Sucata metálica — 140 kg</option></select></label><label>Data<input type="date" required></label><label>Horário<select><option>08:00–10:00</option><option>10:00–12:00</option><option>14:00–16:00</option></select></label><button class="btn solid wide">Confirmar solicitação</button></form></div></div>
+<div class="collection-list" id="collectionList"></div></section>
+<div class="modal hidden" id="collectionModal"><div class="modal-v2"><button class="modal-x" data-close-modal>×</button><span class="tag">NOVA COLETA</span><h2>Solicitar coleta</h2><form id="collectionForm" class="form-v2"><label>Material<select id="collectionMaterial"><option value="Óleo lubrificante|80|L|284">Óleo lubrificante — 80 L</option><option value="Papelão|126|kg|73.08">Papelão — 126 kg</option><option value="Sucata metálica|140|kg|420">Sucata metálica — 140 kg</option><option value="Plástico rígido|60|kg|36">Plástico rígido — 60 kg</option></select></label><label>Data<input id="collectionDate" type="date" required></label><label>Horário<select id="collectionTime"><option>08:00–10:00</option><option>10:00–12:00</option><option>14:00–16:00</option></select></label><button class="btn solid wide">Confirmar solicitação</button></form></div></div>
 
   </main>
-  <script src="app.js"></script><script src="auth.js"></script><script src="coletas.js"></script>
+  <script src="app.js"></script><script src="store.js"></script><script src="auth.js"></script><script src="coletas.js"></script>
 </body>
 </html>

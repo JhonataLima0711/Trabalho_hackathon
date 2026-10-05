@@ -33,16 +33,12 @@
 
   <main class="app-content">
 
-<section class="wallet-top"><div><span class="tag light">CARTEIRA</span><h1>R$ 842<small>,70</small></h1><p>créditos disponíveis</p></div><button class="btn light-btn" id="redeemBtn">Usar créditos →</button></section>
-<section class="wallet-cards"><div><small>Ganhos este mês</small><strong>R$ 412,70</strong><b>↗ 18,6%</b></div><div><small>Pendentes</small><strong>R$ 84,30</strong><span>2 coletas</span></div><div><small>Resgatado</small><strong>R$ 120,00</strong><span>1 benefício</span></div></section>
-<section class="panel-v2"><div class="panel-title"><div><span class="tag">EXTRATO</span><h2>Movimentações</h2></div></div><div class="statement">
-<div><i class="tx plus">+</i><span><strong>Óleo lubrificante</strong><small>EcoÓleo · 29/09</small></span><b class="green-text">+ R$ 84,00</b></div>
-<div><i class="tx plus">+</i><span><strong>Papelão</strong><small>EcoCiclo · 28/09</small></span><b class="green-text">+ R$ 32,50</b></div>
-<div><i class="tx minus">−</i><span><strong>Benefício AutoMais</strong><small>26/09</small></span><b>− R$ 120,00</b></div>
-<div><i class="tx plus">+</i><span><strong>Sucata metálica</strong><small>MetalVerde · 24/09</small></span><b class="green-text">+ R$ 96,20</b></div>
-</div></section>
+<section class="wallet-top"><div><span class="tag light">CARTEIRA</span><h1 id="walletBalance">R$ 842,70</h1><p>créditos disponíveis</p></div><button class="btn light-btn" id="redeemBtn">Usar créditos →</button></section>
+<section class="wallet-cards"><div><small>Ganhos este mês</small><strong>R$ 412,70</strong><b>↗ 18,6%</b></div><div><small>Pendentes</small><strong id="walletPending">R$ 84,30</strong><span>2 coletas</span></div><div><small>Resgatado</small><strong id="walletRedeemed">R$ 120,00</strong><span>1 benefício</span></div></section>
+<section class="panel-v2"><div class="panel-title"><div><span class="tag">EXTRATO</span><h2>Movimentações</h2></div></div><div class="statement" id="statement"></div></section>
+<div class="modal hidden" id="redeemModal"><div class="modal-v2"><button class="modal-x" data-close-modal>×</button><span class="tag">RESGATE</span><h2>Usar créditos</h2><p>Escolha um benefício para simular o resgate.</p><form id="redeemForm" class="form-v2"><label>Benefício<select id="redeemBenefit"><option>Desconto em manutenção</option><option>Crédito para nova coleta</option><option>Voucher parceiro</option></select></label><label>Valor<input id="redeemValue" type="number" min="1" step="0.01" value="50" required></label><button class="btn solid wide">Confirmar resgate</button></form></div></div>
 
   </main>
-  <script src="app.js"></script><script src="auth.js"></script><script src="carteira.js"></script>
+  <script src="app.js"></script><script src="store.js"></script><script src="auth.js"></script><script src="carteira.js"></script>
 </body>
 </html>

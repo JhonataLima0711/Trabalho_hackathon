@@ -34,19 +34,15 @@
   <main class="app-content">
 
 <section class="page-heading-v2"><div><span class="tag">MATERIAIS</span><h1>Resíduos</h1><p>Cadastre o que sua empresa tem disponível.</p></div><button class="btn solid" id="addResidue">+ Novo resíduo</button></section>
-<section class="summary-row"><div><small>Disponível</small><strong>326 kg</strong></div><div><small>Valor estimado</small><strong>R$ 714,30</strong></div><div><small>Em coleta</small><strong>2</strong></div></section>
+<section class="summary-row"><div><small>Disponível</small><strong id="residueAvailable">326 kg</strong></div><div><small>Valor estimado</small><strong id="residueValue">R$ 714,30</strong></div><div><small>Em coleta</small><strong id="residueInCollection">2</strong></div></section>
 <section class="panel-v2">
   <div class="toolbar-v2"><input id="residueSearch" placeholder="Buscar material..."><select id="residueFilter"><option>Todos</option><option>Disponível</option><option>Em coleta</option><option>Destinado</option></select></div>
-  <div class="residue-cards" id="residueCards">
-    <article class="residue-item" data-status="Em coleta"><div class="material-symbol oil">🛢️</div><div class="residue-info"><strong>Óleo lubrificante</strong><small>80 L · atualizado hoje</small></div><div class="residue-value"><strong>R$ 284,00</strong><span class="badge amber">Em coleta</span></div></article>
-    <article class="residue-item" data-status="Disponível"><div class="material-symbol paper">📦</div><div class="residue-info"><strong>Papelão</strong><small>126 kg · atualizado ontem</small></div><div class="residue-value"><strong>R$ 157,50</strong><span class="badge green">Disponível</span></div></article>
-    <article class="residue-item" data-status="Disponível"><div class="material-symbol metal">🔩</div><div class="residue-info"><strong>Sucata metálica</strong><small>140 kg · atualizado 27/09</small></div><div class="residue-value"><strong>R$ 420,00</strong><span class="badge green">Disponível</span></div></article>
-    <article class="residue-item" data-status="Destinado"><div class="material-symbol plastic">🧴</div><div class="residue-info"><strong>Plástico rígido</strong><small>60 kg · atualizado 25/09</small></div><div class="residue-value"><strong>R$ 72,00</strong><span class="badge gray">Destinado</span></div></article>
-  </div>
+  <div class="residue-cards" id="residueCards"></div>
+div>
 </section>
 <div class="modal hidden" id="residueModal"><div class="modal-v2"><button class="modal-x" data-close-modal>×</button><span class="tag">NOVO RESÍDUO</span><h2>Cadastrar material</h2><p>Veja uma estimativa do retorno.</p><form id="residueForm" class="form-v2"><label>Material<select id="materialType" required><option value="">Selecione</option><option data-unit="kg" data-rate="0.58">Papelão</option><option data-unit="kg" data-rate="0.60">Plástico rígido</option><option data-unit="kg" data-rate="3">Sucata metálica</option><option data-unit="L" data-rate="3.55">Óleo lubrificante</option><option data-unit="kg" data-rate="0.90">Alumínio</option><option data-unit="kg" data-rate="1.10">Eletrônicos</option></select></label><div class="two-fields"><label>Quantidade<input id="materialQty" type="number" min=".1" step=".1" required></label><label>Unidade<input id="materialUnit" readonly></label></div><div class="estimate-v2"><span>Valor estimado</span><strong id="materialEstimate">R$ 0,00</strong></div><button class="btn solid wide" type="submit">Adicionar ao catálogo</button></form></div></div>
 
   </main>
-  <script src="app.js"></script><script src="auth.js"></script><script src="residuos.js"></script>
+  <script src="app.js"></script><script src="store.js"></script><script src="auth.js"></script><script src="residuos.js"></script>
 </body>
 </html>
